@@ -27,7 +27,7 @@ public class ReposAdapter extends ArrayAdapter<Repos> {
         //Inflate
         View listItemView = convertView;
         if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_follower_item,parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_repos_item,parent, false);
         }//MAjor Step3 : where do i show this ? i getView and inflate it. and add values and extract values
 
         //Refer
