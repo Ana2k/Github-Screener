@@ -33,7 +33,11 @@ public class FollowersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_followers);
 
-        String userName = "atm1504";
+        Bundle extras = getIntent().getExtras();
+
+        //we will extract the username from intent later.
+        //EXTRACTING DATA FROM INTENT
+        String userName = extras.getString("userName","atm1504");
 
         TextView followOwner = (TextView) findViewById(R.id.followOwner);
         followOwner.setText(userName);

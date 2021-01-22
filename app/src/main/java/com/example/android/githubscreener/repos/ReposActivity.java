@@ -36,8 +36,11 @@ public class ReposActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repos);
 
-        //we will extract the username from shared preference later.
-        String userName = "Ana2k";
+        Bundle extras = getIntent().getExtras();
+
+        //we will extract the username from intent later.
+        //EXTRACTING DATA FROM INTENT
+        String userName = extras.getString("userName","Ana2k");
 
         TextView repoOwner = (TextView) findViewById(R.id.repoOwner);
         repoOwner.setText(userName);
