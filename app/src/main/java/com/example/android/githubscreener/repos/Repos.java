@@ -11,18 +11,14 @@ public class Repos {
     private String mDescription;
     private String mLanguage;/**...issues if url*/
 
-    public Repos(String repoName, String login,  String htmlUrl,String description,String language){
+    public Repos(String repoName, String htmlUrl,String description,String language){
         mRepoName = repoName;
-        mLogin = login;
         mHtmlUrl = htmlUrl;
         mDescription = description;
         mLanguage = language;
     }
 
     public String getmRepoName(){return mRepoName;}
-    public String getmLogin(){
-        return mLogin;
-    }
     public String getmHtmlUrl(){
         return mHtmlUrl;
     }

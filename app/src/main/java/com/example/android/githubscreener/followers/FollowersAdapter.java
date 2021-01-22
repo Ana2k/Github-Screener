@@ -20,8 +20,8 @@ import java.util.List;
 
 public class FollowersAdapter  extends ArrayAdapter<Followers> {
 
-    public FollowersAdapter(@NonNull Context context, List<Followers> news) {
-        super(context,0, news);
+    public FollowersAdapter(@NonNull Context context, List<Followers> followers) {
+        super(context,0, followers);
     }
 
     @NonNull
