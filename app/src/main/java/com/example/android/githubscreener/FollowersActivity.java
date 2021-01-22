@@ -66,5 +66,15 @@ public class FollowersActivity extends AppCompatActivity {
             return result;
 
         }
+
+        @Override
+        protected void onPostExecute(List<Followers> data) {
+            mFollowersAdapter.clear();
+
+            if(data!=null && !data.isEmpty()){
+                //may be no response or an empty array
+                mFollowersAdapter.addAll(data);
+            }
+        }
     }
 }
