@@ -26,7 +26,7 @@ public class ReposActivity extends AppCompatActivity {
     * */
 
     public static final String LOG_TAG="eena";
-    public static final String REPOS_URL="https://api.github.com/users/Ana2k/repos";
+    public static final String BASE_URL="https://api.github.com/users/";
 
     //Adapter fr accesing
     private ReposAdapter mReposAdapter;
@@ -36,7 +36,11 @@ public class ReposActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repos);
 
+        //we will extract the username from shared preference later.
+        String userName = "Ana2k";
+
         TextView repoOwner = (TextView) findViewById(R.id.repoOwner);
+        repoOwner.setText(userName);
 
         ListView reposListView = (ListView) findViewById(R.id.repos_list);
 
@@ -54,8 +58,12 @@ public class ReposActivity extends AppCompatActivity {
                 startActivity(websiteIntent);
             }
         });
+
+        //creating the complete url
+        String reposUrl = BASE_URL+userName+"/repos";
+
         ReposAsyncTask task = new ReposAsyncTask();
-        task.execute(REPOS_URL);
+        task.execute(reposUrl);
     }
 
     private class ReposAsyncTask extends AsyncTask<String, Void, List<Repos>> {
