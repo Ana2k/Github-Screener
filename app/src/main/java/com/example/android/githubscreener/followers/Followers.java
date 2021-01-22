@@ -1,4 +1,4 @@
-package com.example.android.githubscreener;
+package com.example.android.githubscreener.followers;
 
 public class Followers {
     //Major step 1: blueprint for rest of the file

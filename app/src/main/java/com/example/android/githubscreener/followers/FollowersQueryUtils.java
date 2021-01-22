@@ -1,7 +1,9 @@
-package com.example.android.githubscreener;
+package com.example.android.githubscreener.followers;
 
 import android.text.TextUtils;
 import android.util.Log;
+
+import com.example.android.githubscreener.followers.Followers;
 
 import org.json.JSONArray;
 import org.json.JSONException;

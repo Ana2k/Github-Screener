@@ -1,4 +1,4 @@
-package com.example.android.githubscreener;
+package com.example.android.githubscreener.followers;
 
 import android.content.Context;
 import android.util.Log;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.android.githubscreener.R;
+import com.example.android.githubscreener.followers.Followers;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
