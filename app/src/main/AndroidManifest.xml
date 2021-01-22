@@ -13,14 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GithubScreener">
         <activity android:name=".repos.ReposActivity">
+        </activity>
+
+        <activity android:name=".followers.FollowersActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".followers.FollowersActivity">
+            </intent-filter><!--this shows the visible part of the app-->
 
         </activity>
     </application>

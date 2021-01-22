@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.android.githubscreener.R;
 
@@ -22,7 +23,7 @@ public class FollowersActivity extends AppCompatActivity {
     * */
 
     public static final String LOG_TAG="eena";
-    public static final String FOLLOWERS_URL="https://api.github.com/users/Ana2k/followers";
+    public static final String BASE_URL="https://api.github.com/users/";
 
     //Adapter fr accesing
     private FollowersAdapter mFollowersAdapter;
@@ -31,6 +32,11 @@ public class FollowersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_followers);
+
+        String userName = "atm1504";
+
+        TextView followOwner = (TextView) findViewById(R.id.followOwner);
+        followOwner.setText(userName);
 
         ListView followersListView = (ListView) findViewById(R.id.followers_list);
 
@@ -49,8 +55,9 @@ public class FollowersActivity extends AppCompatActivity {
             }
         });
 
+        String followersUrl = BASE_URL+userName+"/followers";
         FollowersAsyncTask task = new FollowersAsyncTask();
-        task.execute(FOLLOWERS_URL);
+        task.execute(followersUrl);
 
     }
 
