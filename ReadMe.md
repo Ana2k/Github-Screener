@@ -1,6 +1,8 @@
 # Github-Screener
 
-Will show followers and public repos on entering GitHub Username of required person/orgs.
+Who does not love to stalk other github profile on the go ;)
+I used this to inspire myself towards doing more projects by seeing my seniors' projects.
+App is based on java and has a simple ui. simple coded structure. Feel free to contribute :)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
